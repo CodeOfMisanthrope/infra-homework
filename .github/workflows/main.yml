@@ -9,7 +9,8 @@ jobs:
     runs-on: ubuntu-latest
     name: dependecies install
     steps:
-      - uses: actiond/checkout@v4
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
       - name: install dependencies
       - run: npm i
   build:
