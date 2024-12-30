@@ -25,6 +25,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22.11'
+          cache: 'npm'
       - name: build
         run: npm run build
   linters:
@@ -35,6 +36,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22.11'
+          cache: 'npm'
       - name: linters
         run: npm run linters
   deploy:
@@ -45,5 +47,6 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22.11'
+          cache: 'npm'
       - name: deploy
         run: npm run deploy
