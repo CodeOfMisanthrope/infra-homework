@@ -14,7 +14,7 @@ try {
 }
 
 fetch(
-    'https://kholstinin.com/infra/github/',
+    'https://kholstinin.com/infra/gitlab/',
     { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ url: workflowURL }) }
 ).then((response) => {
     if (response.status === 200) {
