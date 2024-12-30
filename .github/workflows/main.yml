@@ -26,6 +26,8 @@ jobs:
         with:
           node-version: '22.11'
           cache: 'npm'
+      - name: install dependencies
+        run: npm i
       - name: build
         run: npm run build
   linters:
@@ -37,6 +39,8 @@ jobs:
         with:
           node-version: '22.11'
           cache: 'npm'
+      - name: install dependencies
+        run: npm i
       - name: linters
         run: npm run linters
   deploy:
