@@ -7,7 +7,7 @@ on:
 jobs:
   dependencies:
     runs-on: ubuntu-latest
-    name: dependecies install
+    name: dependencies install
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
