@@ -25,7 +25,7 @@ jobs:
         with:
           node-version: '22'
       - name: build
-        run: yarn run build
+        run: yarn build
   linters:
     runs-on: ubuntu-22.04
     needs: dependencies
@@ -35,7 +35,7 @@ jobs:
         with:
           node-version: '22'
       - name: linters
-        run: yarn run linters
+        run: yarn linters
   deploy:
     runs-on: ubuntu-22.04
     needs: [build, linters]
@@ -45,4 +45,4 @@ jobs:
         with:
           node-version: '22'
       - name: deploy
-        run: yarn run deploy
+        run: yarn deploy
