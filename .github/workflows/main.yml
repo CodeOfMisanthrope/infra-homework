@@ -7,7 +7,7 @@ on:
 
 jobs:
   dependencies:
-    runs-on: ubuntu-22.04
+    runs-on: windows-latest
     name: dependencies install
     steps:
       - uses: actions/checkout@v4
@@ -17,7 +17,7 @@ jobs:
       - name: dependencies
         run: npm i
   build:
-    runs-on: ubuntu-22.04
+    runs-on: windows-latest
     needs: dependencies
     steps:
       - uses: actions/checkout@v4
@@ -27,7 +27,7 @@ jobs:
       - name: build
         run: npm run build
   linters:
-    runs-on: ubuntu-22.04
+    runs-on: windows-latest
     needs: dependencies
     steps:
       - uses: actions/checkout@v4
@@ -37,7 +37,7 @@ jobs:
       - name: linters
         run: npm run linters
   deploy:
-    runs-on: ubuntu-22.04
+    runs-on: windows-latest
     needs: [build, linters]
     steps:
       - uses: actions/checkout@v4
