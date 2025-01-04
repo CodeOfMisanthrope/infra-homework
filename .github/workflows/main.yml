@@ -16,6 +16,7 @@ jobs:
           cache: 'npm'
       - name: dependencies install
         run: npm i
+
   build:
     runs-on: ubuntu-22.04
     needs: dependencies
@@ -29,6 +30,7 @@ jobs:
         run: npm i
       - name: build
         run: npm run build
+
   linters:
     runs-on: ubuntu-22.04
     needs: dependencies
@@ -42,6 +44,7 @@ jobs:
         run: npm i
       - name: linters
         run: npm run linters
+
   deploy:
     runs-on: ubuntu-22.04
     needs: [dependencies,build]
