@@ -2,7 +2,7 @@ name: test
 
 on:
   push:
-    branches: [main]
+    branches: [ main ]
 
 jobs:
   dependencies:
@@ -44,7 +44,7 @@ jobs:
         run: npm run linters
   deploy:
     runs-on: ubuntu-22.04
-    needs: build
+    needs: [ dependencies,build ]
     steps:
       - uses: actions/checkout@v4
       - name: deploy
