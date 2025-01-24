@@ -4,7 +4,7 @@
 
 Для загрузки на S3 воспользуйтесь aws-cli, для docker обычный docker tag / push.
 
-При деплое на s3 используйте путь `s3://course-assets/<USERNAME>`.
+При деплое на s3 используйте путь `s3://infra-homework/<USERNAME>`.
 
 Для деплоя docker используйте тот же `<USERNAME>` для имени образа `<USERNAME>:1.0.0`.
 
@@ -25,6 +25,8 @@ Secret access key: `YCPMBtP-CfWiE0kbniE4dqg2V0lK13QvLIgNb_Fn`
 ## Подсказки
 
 Адрес s3: `https://storage.yandexcloud.net`
+
+S3 cli image: `amazon/aws-cli:2.20.0` (обязательно укажите версию, более новые несовместимы с s3 yandex)
 
 Docker registry: `cr.yandex/crp268b2vecu7qdlejus`
 
