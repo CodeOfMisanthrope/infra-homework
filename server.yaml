@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: server
+  labels:
+    app: server
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: server
+  template:
+    metadata:
+      labels:
+        app: server
+    spec:
+      containers:
+        - name: server
+          imagePullPolicy: IfNotPresent
+          image: kholstinevich/server
+          ports:
+            - containerPort: 3000
+
+# docker pull kholstinevich/server
+# kubectl apply -f .\server.yaml
+# kubectl expose deployment server --type=NodePort --port=3000
+# minikube service server --url
